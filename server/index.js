@@ -22,7 +22,6 @@ const executableSchema = makeExecutableSchema({
 //   preserveResolvers: true
 // });
 
-// `context` must be an object and can't be undefined when using connectors
 
 app.use(
   '/graphql',

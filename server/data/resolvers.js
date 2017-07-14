@@ -11,7 +11,7 @@ export const Resolvers = {
     messages(_, args) {
       return Message.findAll({
         where: args,
-        order: [['createdAt', 'DESC']]
+        order: [['createdAt', 'DESC']],
       });
     },
     user(_, args) {
@@ -24,7 +24,7 @@ export const Resolvers = {
     },
     messages(group) {
       return Message.findAll({
-        where: {groupId: group.id},
+        where: { groupId: group.id },
         order: [['createdAt', 'DESC']],
       });
     },
@@ -40,7 +40,7 @@ export const Resolvers = {
   User: {
     messages(user) {
       return Message.findAll({
-        where: {userId: user.id},
+        where: { userId: user.id },
         order: [['createdAt', 'DESC']],
       });
     },
